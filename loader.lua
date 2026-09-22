@@ -109,7 +109,6 @@ local Features = {
     AnimationChanger = false,
     WalkSpeed = 16,
     JumpPower = 50,
-    Gravity = 196.2,
     AutoClick = false,
     AutoRejoin = false,
 }
@@ -122,7 +121,6 @@ local State = {
     Connections = {},
     lastSpike = 0,
     lastEmote = 0,
-    originalGravity = workspace.Gravity,
     originalWalkSpeed = 16,
     originalJumpPower = 50,
 }
@@ -143,7 +141,7 @@ end
 local Window = Library:CreateWindow({
     Title = "KingsHub",
     Footer = VERSION .. " | 80+ Features",
-    Icon = 76037421850699,
+    Icon = crown,
     AutoShow = true,
     Resizable = true,
 })
@@ -466,11 +464,6 @@ RunService.RenderStepped:Connect(function()
                 hum.JumpPower = Features.JumpPower
             end
         end
-    end
-    
-    -- Gravity
-    if Features.Gravity ~= State.originalGravity then
-        workspace.Gravity = Features.Gravity
     end
     
     -- Custom FOV
@@ -916,7 +909,7 @@ MiscRight:AddSlider("EmoteSpeed", {Text = "Emote Speed", Default = 1, Min = 0.1,
 MiscRight:AddToggle("AnimationChanger", {Text = "Animation Changer", Default = false, Callback = function(v) Features.AnimationChanger = v end})
 MiscRight:AddSlider("WalkSpeed", {Text = "Walk Speed", Default = 16, Min = 16, Max = 100, Callback = function(v) Features.WalkSpeed = v end})
 MiscRight:AddSlider("JumpPower", {Text = "Jump Power", Default = 50, Min = 50, Max = 150, Callback = function(v) Features.JumpPower = v end})
-MiscRight:AddSlider("Gravity", {Text = "Gravity", Default = 196, Min = 0, Max = 500, Callback = function(v) Features.Gravity = v end})
+
 
 -- TAB: GAME
 
