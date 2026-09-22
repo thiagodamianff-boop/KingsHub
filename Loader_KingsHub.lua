@@ -1,8 +1,4 @@
--- KingsHub v6.5
--- 100+ Funciones | Volleyball Legends Ultimate
--- UI: Obsidian Premium
-
-local VERSION = "v6.5"
+local VERSION = "v6"
 local START_TIME = tick()
 
 -- Services
