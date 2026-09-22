@@ -1,6 +1,3 @@
-local VERSION = "v6"
-local START_TIME = tick()
-
 -- Services
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
